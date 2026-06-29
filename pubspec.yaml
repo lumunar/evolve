@@ -5,6 +5,12 @@ homepage: https://github.com/lumunar/lumu_evolve
 repository: https://github.com/lumunar/lumu_evolve
 issue_tracker: https://github.com/lumunar/lumu_evolve/issues
 
+topics:
+  - extensions
+  - utilities
+  - kotlin
+  - fluent-api
+
 environment:
   sdk: '>=3.12.2 <4.0.0'
   flutter: '>=3.44.4'
