@@ -23,16 +23,19 @@ void main() {
     });
 
     group('also', () {
-      test('should execute block and return receiver for non-null receiver', () {
-        final List<int> list = [1, 2, 3];
-        var sideEffectRun = false;
-        final result = list.also((self) {
-          sideEffectRun = true;
-          self.add(4);
-        });
-        expect(result, equals([1, 2, 3, 4]));
-        expect(sideEffectRun, isTrue);
-      });
+      test(
+        'should execute block and return receiver for non-null receiver',
+        () {
+          final List<int> list = [1, 2, 3];
+          var sideEffectRun = false;
+          final result = list.also((self) {
+            sideEffectRun = true;
+            self.add(4);
+          });
+          expect(result, equals([1, 2, 3, 4]));
+          expect(sideEffectRun, isTrue);
+        },
+      );
 
       test('should return null without executing block for null receiver', () {
         final List<int>? list = null;
@@ -79,39 +82,51 @@ void main() {
     group('pick', () {
       test('should return match block result when true', () {
         final bool flag = true;
-        expect(flag.pick(match: () => 'yes', otherwise: () => 'no'), equals('yes'));
+        expect(
+          flag.pick(match: () => 'yes', otherwise: () => 'no'),
+          equals('yes'),
+        );
       });
 
       test('should return otherwise block result when false', () {
         final bool flag = false;
-        expect(flag.pick(match: () => 'yes', otherwise: () => 'no'), equals('no'));
+        expect(
+          flag.pick(match: () => 'yes', otherwise: () => 'no'),
+          equals('no'),
+        );
       });
 
       test('should return otherwise block result when null', () {
         final bool? flag = null;
-        expect(flag.pick(match: () => 'yes', otherwise: () => 'no'), equals('no'));
-      });
-
-      test('should only execute matching block and avoid evaluation of the other branch', () {
-        final bool flag = true;
-        var matchExecuted = false;
-        var otherwiseExecuted = false;
-
-        final result = flag.pick(
-          match: () {
-            matchExecuted = true;
-            return 'matched';
-          },
-          otherwise: () {
-            otherwiseExecuted = true;
-            return 'otherwise';
-          },
+        expect(
+          flag.pick(match: () => 'yes', otherwise: () => 'no'),
+          equals('no'),
         );
-
-        expect(result, equals('matched'));
-        expect(matchExecuted, isTrue);
-        expect(otherwiseExecuted, isFalse);
       });
+
+      test(
+        'should only execute matching block and avoid evaluation of the other branch',
+        () {
+          final bool flag = true;
+          var matchExecuted = false;
+          var otherwiseExecuted = false;
+
+          final result = flag.pick(
+            match: () {
+              matchExecuted = true;
+              return 'matched';
+            },
+            otherwise: () {
+              otherwiseExecuted = true;
+              return 'otherwise';
+            },
+          );
+
+          expect(result, equals('matched'));
+          expect(matchExecuted, isTrue);
+          expect(otherwiseExecuted, isFalse);
+        },
+      );
     });
   });
 }
