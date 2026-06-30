@@ -1,3 +1,11 @@
+## 1.0.1
+
+### Added
+- Interactive showcase Flutter app in `example/main.dart` demonstrating all package utilities.
+
+### Fixed
+- Missing documentation comments for `MagicBooleanExtension`.
+
 ## 1.0.0
 
 ### Added

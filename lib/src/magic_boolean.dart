@@ -1,3 +1,5 @@
+/// Fluent extensions on nullable booleans to eliminate inline ternaries and
+/// write cleaner, functional conditional logic.
 extension MagicBooleanExtension on bool? {
   /// Maps the boolean state to [then] if true, or [pass] if false or null.
   T when<T>({required T then, required T pass}) {

@@ -1,4 +1,4 @@
-/// Kotlin-inspired scope functions and smart type utilities on all objects.
+/// Scope functions and smart type utilities on all objects.
 extension MagicObjectExtension<T> on T? {
   /// Executes the given [block] with the receiver as its argument if it is not null,
   /// and returns its result. Returns null if the receiver is null.
