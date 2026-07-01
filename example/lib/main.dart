@@ -68,7 +68,10 @@ class Banner extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [colors.primaryContainer, colors.surfaceContainerHighest.withValues(alpha: 0.6)],
+            colors: [
+              colors.primaryContainer,
+              colors.surfaceContainerHighest.withValues(alpha: 0.6),
+            ],
             begin: .topLeft,
             end: .bottomRight,
           ),
@@ -83,17 +86,35 @@ class Banner extends StatelessWidget {
                 children: [
                   // Showcase 2: Lazy selection using .pick for screen-specific icons
                   isPort.pick(
-                    match: () => Icon(Icons.phone_iphone, size: 32, color: colors.primary),
+                    match: () => Icon(
+                      Icons.phone_iphone,
+                      size: 32,
+                      color: colors.primary,
+                    ),
                     otherwise: () => isWide.pick(
-                      match: () => Icon(Icons.desktop_windows, size: 32, color: colors.primary),
-                      otherwise: () => Icon(Icons.tablet_mac, size: 32, color: colors.primary),
+                      match: () => Icon(
+                        Icons.desktop_windows,
+                        size: 32,
+                        color: colors.primary,
+                      ),
+                      otherwise: () => Icon(
+                        Icons.tablet_mac,
+                        size: 32,
+                        color: colors.primary,
+                      ),
                     ),
                   ),
                   // Showcase 3: Boolean status mapping with .when
                   Container(
-                    padding: .symmetric(horizontal: Space.small.fit(context), vertical: Space.tiny.fit(context)),
+                    padding: .symmetric(
+                      horizontal: Space.small.fit(context),
+                      vertical: Space.tiny.fit(context),
+                    ),
                     decoration: BoxDecoration(
-                      color: isPort.when(then: colors.secondaryContainer, pass: colors.tertiaryContainer),
+                      color: isPort.when(
+                        then: colors.secondaryContainer,
+                        pass: colors.tertiaryContainer,
+                      ),
                       borderRadius: .circular(16),
                     ),
                     child: Text(
@@ -105,11 +126,16 @@ class Banner extends StatelessWidget {
               ),
               SizedBox(height: Space.medium.fit(context)),
               // Showcase 4: Safe fallback with .or on string values
-              Text(status.or('Default Workspace'), style: texts.headlineSmall?.copyWith(fontWeight: .bold)),
+              Text(
+                status.or('Default Workspace'),
+                style: texts.headlineSmall?.copyWith(fontWeight: .bold),
+              ),
               SizedBox(height: Space.tiny.fit(context)),
               Text(
                 'Screen width: ${width.toStringAsFixed(1)} dp',
-                style: .new(color: colors.onSurfaceVariant.withValues(alpha: 0.8)),
+                style: .new(
+                  color: colors.onSurfaceVariant.withValues(alpha: 0.8),
+                ),
               ),
             ],
           ),
@@ -141,12 +167,17 @@ class _ProfileState extends State<Profile> {
         Row(
           mainAxisAlignment: .spaceBetween,
           children: [
-            Text('Profile Management', style: texts.titleMedium?.copyWith(fontWeight: .bold)),
+            Text(
+              'Profile Management',
+              style: texts.titleMedium?.copyWith(fontWeight: .bold),
+            ),
             IconButton(
               icon: const Icon(Icons.refresh, size: 20),
               onPressed: () {
                 setState(() {
-                  _customProfileName = _customProfileName == null ? 'Sarah Jenkins' : null;
+                  _customProfileName = _customProfileName == null
+                      ? 'Sarah Jenkins'
+                      : null;
                 });
               },
             ),
@@ -171,9 +202,15 @@ class _ProfileState extends State<Profile> {
                   // Showcase 6: Safe nullable variable evaluation with .or
                   title: Text(_customProfileName.or('Guest User')),
                   subtitle: Text(
-                    _isVip.when(then: 'Premium VIP Member', pass: 'Standard Account'),
+                    _isVip.when(
+                      then: 'Premium VIP Member',
+                      pass: 'Standard Account',
+                    ),
                     style: .new(
-                      color: _isVip.when(then: Colors.amber, pass: colors.onSurfaceVariant),
+                      color: _isVip.when(
+                        then: Colors.amber,
+                        pass: colors.onSurfaceVariant,
+                      ),
                       fontWeight: _isVip.when(then: .bold, pass: .normal),
                     ),
                   ),
@@ -198,7 +235,11 @@ class _ProfileState extends State<Profile> {
                       spacing: 8.0,
                       children: [
                         Icon(Icons.workspace_premium, color: Colors.amber),
-                        Expanded(child: Text('Unlocked all premium responsive grids and adaptive layout overrides.')),
+                        Expanded(
+                          child: Text(
+                            'Unlocked all premium responsive grids and adaptive layout overrides.',
+                          ),
+                        ),
                       ],
                     ),
                   ),
