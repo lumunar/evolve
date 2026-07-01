@@ -57,10 +57,10 @@ Widget userProfileCard(User? user, BuildContext context) {
   Color cardColor;
   if (user != null) {
     cardColor = user.membership == Membership.vip 
-      ? Theme.of(context).colorScheme.primaryContainer 
-      : Theme.of(context).colorScheme.surfaceVariant;
+      ? ColorScheme.of(context).primaryContainer 
+      : ColorScheme.of(context).surfaceVariant;
   } else {
-    cardColor = Theme.of(context).colorScheme.surface;
+    cardColor = ColorScheme.of(context).surface;
   }
 
   return Card(
@@ -78,7 +78,7 @@ Widget userProfileCard(User? user, BuildContext context) {
 Widget userProfileCard(User? user, BuildContext context) {
   final name = user?.name.or('Anonymous');
   final avatar = user?.avatarUrl.or('assets/default.png');
-  final theme = Theme.of(context).colorScheme;
+  final theme = ColorScheme.of(context);
 
   return Card(
     color: user?.let((u) => (u.membership == Membership.vip).when(
