@@ -7,7 +7,7 @@
 - **Scale Configurations (`Breakpoints`)**: Mutable global breakpoint scaling factors (`Breakpoints.land`, `Breakpoints.wide`) that can be customized dynamically at app startup.
 
 ### Changed
-- Re-architected and polished the example app in `example/lib/main.dart` into a clean modular layout (`App`, `Root`, `Banner`, `Profile`) demonstrating the integration of all scope functions, conditional selectors, and spacing tokens.
+- Re-architected and polished the example app in `example/lib/main.dart` into a clean modular layout (`App`, `Home`, `Banner`, `Profile`) demonstrating the integration of all scope functions, conditional selectors, and spacing tokens.
 
 ## 1.0.1
 
