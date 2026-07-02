@@ -50,7 +50,6 @@ body: [
     attributes: {
       label: "Code Example",
       description: "Provide a minimal code snippet to demonstrate the problem.",
-      render: dart,
       placeholder: "// Paste code here"
     }
   },

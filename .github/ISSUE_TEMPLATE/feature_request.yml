@@ -50,7 +50,6 @@ body: [
     attributes: {
       label: "Code Concept",
       description: "Provide a conceptual example of the proposed API.",
-      render: dart,
       placeholder: "// Paste concept code here"
     }
   }
