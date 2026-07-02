@@ -1,5 +1,7 @@
 # Contributing to Lumu Evolve
 
+We welcome your contributions to this project. Please review these guidelines to understand how you can help us develop and improve Lumu Evolve.
+
 <br>
 
 ### Welcome to the Community
@@ -48,7 +50,7 @@ To maintain code quality, please adhere to these standards:
 
 <br>
 
-#### Testing Guidelines
+### Testing Guidelines
 
 We value comprehensive test coverage. When adding new features or fixing bugs:
 

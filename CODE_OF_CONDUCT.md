@@ -1,5 +1,7 @@
 # Code of Conduct
 
+This document outlines our community standards and expectations. We expect all participants to follow these guidelines to ensure a welcoming environment for everyone.
+
 <br>
 
 ### Our Pledge
