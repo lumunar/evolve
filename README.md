@@ -227,3 +227,8 @@ Widget dashboard(bool isLoading, bool isLandscape, Widget data) {
 }
 ```
 
+<br>
+
+### License
+
+This project is licensed under the 3-Clause BSD License - see the [LICENSE](LICENSE) file for details.
