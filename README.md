@@ -21,7 +21,6 @@ Import the package:
 import 'package:lumu_evolve/lumu_evolve.dart';
 ```
 
-
 <br>
 
 ## Cleaner Control Flows
@@ -41,7 +40,6 @@ Widget header(User? user, bool isCompact) {
 }
 ```
 
-
 **After**: Using declarative extension methods, you can write linear, self-documenting code that is easier to maintain:
 
 ```dart
@@ -58,10 +56,9 @@ Widget header(User? user, bool isCompact) {
 }
 ```
 
-
 <br>
 
-## ResponsiveSpacing
+## Responsive Spacing
 
 **Before**: Calculating responsive spacing dynamically across different screen sizes usually requires querying `MediaQuery` and writing verbose viewport branching:
 
@@ -86,7 +83,6 @@ Widget build(BuildContext context) {
 }
 ```
 
-
 **After**: Using context-aware design tokens, layout values scale automatically across viewports with zero boilerplate:
 
 ```dart
@@ -98,3 +94,58 @@ Widget build(BuildContext context) {
   );
 }
 ```
+
+<br>
+
+#### Scoped Styling & Configuration
+
+**Before**: Managing conditional styles and fallback values for nullable models often leads to boilerplate-heavy nested branches:
+
+```dart
+Widget userProfileCard(User? user, BuildContext context) {
+  final name = user != null ? user.name : 'Anonymous';
+  final avatar = user != null && user.avatarUrl != null 
+    ? user.avatarUrl! 
+    : 'assets/default.png';
+  
+  Color color;
+  if (user != null) {
+    color = user.membership == Membership.vip 
+      ? ColorScheme.of(context).primaryContainer 
+      : ColorScheme.of(context).surfaceVariant;
+  } else {
+    color = ColorScheme.of(context).surface;
+  }
+
+  return Card(
+    color: color,
+    child: ListTile(
+      leading: Image.asset(avatar),
+      title: Text(name),
+    ),
+  );
+}
+```
+
+
+**After**: Combining scope functions (`.let`, `.or`) with fluent booleans keeps the layout expression-driven, declarative, and completely null-safe:
+
+```dart
+Widget userProfileCard(User? user, BuildContext context) {
+  final name = (user?.name).or('Anonymous');
+  final avatar = (user?.avatarUrl).or('assets/default.png');
+  final colors = ColorScheme.of(context);
+
+  return Card(
+    color: user?.let((u) => (u.membership == Membership.vip).when(
+      then: colors.primaryContainer,
+      pass: colors.surfaceVariant,
+    )).or(colors.surface),
+    child: ListTile(
+      leading: Image.asset(avatar),
+      title: Text(name),
+    ),
+  );
+}
+```
+
