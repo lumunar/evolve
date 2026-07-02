@@ -6,7 +6,7 @@ By introducing readable, chainable, and functional scope functions, it empowers 
 
 <br>
 
-## Installation
+### Installation
 
 Add the dependency to your project:
 
@@ -23,7 +23,7 @@ import 'package:lumu_evolve/lumu_evolve.dart';
 
 <br>
 
-## Cleaner Control Flows
+### Cleaner Control Flows
 
 **Before**: Traditional Flutter code often relies on nested ternaries and verbose null checks for conditional styling and rendering:
 
@@ -58,7 +58,7 @@ Widget header(User? user, bool isCompact) {
 
 <br>
 
-## Responsive Spacing
+### Responsive Spacing
 
 **Before**: Calculating responsive spacing dynamically across different screen sizes usually requires querying `MediaQuery` and writing verbose viewport branching:
 
