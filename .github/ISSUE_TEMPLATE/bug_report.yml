@@ -1,11 +1,11 @@
 name: Bug Report
-description: Report a bug to help us improve Lumu Evolve
+description: Report a bug to help us improve
 labels: [bug]
 body: [
   {
     type: markdown,
     attributes: {
-      value: "### Bug Report\n\nPlease use this form to report bugs and help us improve Lumu Evolve."
+      value: "### Bug Report\n\nPlease use this form to report bugs and help us improve."
     }
   },
   {
