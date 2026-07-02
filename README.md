@@ -15,7 +15,7 @@ flutter pub add lumu_evolve
 ```
 
 
-Import the package in your Dart files:
+Import the package:
 
 ```dart
 import 'package:lumu_evolve/lumu_evolve.dart';
