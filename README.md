@@ -97,7 +97,7 @@ Widget build(BuildContext context) {
 
 <br>
 
-#### Scoped Styling & Configuration
+### Scoped Styling & Configuration
 
 **Before**: Managing conditional styles and fallback values for nullable models often leads to boilerplate-heavy nested branches:
 
