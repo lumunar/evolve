@@ -23,6 +23,27 @@ import 'package:lumu_evolve/lumu_evolve.dart';
 
 <br>
 
+### Configuration
+
+You can customize breakpoints, scale factors, and design tokens globally at startup:
+
+```dart
+void main() {
+  // Customize tablet breakpoint
+  Breakpoints.land.value = 650.0;
+
+  // Customize desktop scale factor
+  Breakpoints.wide.scale(1.8);
+
+  // Customize design tokens
+  Space.base = const Fit(20.0); // Scales automatically
+
+  runApp(const MyApp());
+}
+```
+
+<br>
+
 ### Cleaner Control Flows
 
 **Before**: Traditional Flutter code often relies on nested ternaries and verbose null checks for conditional styling and rendering:
