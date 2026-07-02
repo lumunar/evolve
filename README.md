@@ -61,7 +61,7 @@ Widget header(User? user, bool isCompact) {
 
 <br>
 
-#### Responsive Spacing
+<h1 style="border-bottom:none">ResponsiveSpacing</h1>
 
 **Before**: Calculating responsive spacing dynamically across different screen sizes usually requires querying `MediaQuery` and writing verbose viewport branching:
 
