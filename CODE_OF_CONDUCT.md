@@ -1,9 +1,8 @@
-### Lumu Evolve Code of Conduct
-
+# Code of Conduct
 
 <br>
 
-#### Our Pledge
+### Our Pledge
 
 We as members, contributors, and leaders pledge to make participation in our community a harassment free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socioeconomic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
 
@@ -12,7 +11,7 @@ We pledge to act and interact in ways that contribute to an open, welcoming, div
 
 <br>
 
-#### Our Standards
+### Our Standards
 
 Examples of behavior that contributes to a positive environment for our community include:
 
@@ -34,7 +33,7 @@ Examples of unacceptable behavior include:
 
 <br>
 
-#### Enforcement Responsibilities
+### Enforcement Responsibilities
 
 Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate, fair, and corrective action in response to any behavior they deem inappropriate, threatening, offensive, or harmful.
 
@@ -43,14 +42,14 @@ Community leaders have the right and responsibility to remove, edit, or reject c
 
 <br>
 
-#### Scope
+### Scope
 
 This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official email address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
 
 
 <br>
 
-#### Enforcement
+### Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders at **community@lumunar.com**. All complaints will be reviewed and investigated promptly and fairly.
 
@@ -59,6 +58,6 @@ All community leaders are obligated to respect the privacy and security of the r
 
 <br>
 
-#### Attribution
+### Attribution
 
 This Code of Conduct is adapted from the Contributor Covenant, version 2.1, available at https://www.contributorcovenant.org/version/2/1/code_of_conduct.html.
